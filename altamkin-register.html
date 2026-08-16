@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التمكين الريادي | تسجيل عميل جديد — New Customer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0e1a24;          /* deep petrol ink */
+    --ink-soft:#3a4c58;
+    --sand:#f6f2ea;         /* warm paper */
+    --card:#ffffff;
+    --gold:#b8935a;         /* muted brass accent */
+    --gold-deep:#96743f;
+    --line:#e2dccf;
+    --ok:#1f7a53;
+    --err:#b23b3b;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;
+    background:var(--sand);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:24px 18px 60px}
+
+  /* Header */
+  .brand{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    padding:14px 0 6px;
+  }
+  .brand .mark{
+    width:44px;height:44px;border-radius:11px;
+    background:linear-gradient(150deg,var(--ink),#1c3340);
+    display:grid;place-items:center;color:var(--gold);
+    font-family:"Fraunces",serif;font-weight:600;font-size:22px;
+    box-shadow:0 6px 18px rgba(14,26,36,.18);
+  }
+  .brand .name{font-weight:700;font-size:17px;letter-spacing:.2px}
+  .brand .name span{display:block;font-size:11px;color:var(--ink-soft);font-weight:500;letter-spacing:1.5px;text-transform:uppercase}
+
+  /* Language toggle */
+  .langbar{display:flex;justify-content:center;margin:10px 0 22px}
+  .langbar button{
+    border:1px solid var(--line);background:var(--card);
+    padding:7px 18px;font-family:inherit;font-size:13px;cursor:pointer;
+    color:var(--ink-soft);transition:.15s;
+  }
+  .langbar button:first-child{border-radius:0 999px 999px 0}
+  .langbar button:last-child{border-radius:999px 0 0 999px}
+  html[dir=ltr] .langbar button:first-child{border-radius:999px 0 0 999px}
+  html[dir=ltr] .langbar button:last-child{border-radius:0 999px 999px 0}
+  .langbar button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  /* Hero */
+  .hero{text-align:center;margin-bottom:26px}
+  .eyebrow{
+    font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
+    color:var(--gold-deep);font-weight:600;margin-bottom:10px;
+  }
+  .hero h1{
+    font-family:"Fraunces",serif;font-weight:600;
+    font-size:26px;line-height:1.3;margin:0 0 10px;
+  }
+  .hero p{color:var(--ink-soft);font-size:14.5px;margin:0}
+
+  /* Card */
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 22px;
+    box-shadow:0 20px 50px -30px rgba(14,26,36,.4);
+  }
+
+  .field{margin-bottom:18px}
+  .field label{
+    display:block;font-size:13px;font-weight:600;margin-bottom:7px;
+  }
+  .field label .req{color:var(--gold-deep)}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;font-family:inherit;font-size:15px;
+    border:1px solid var(--line);border-radius:10px;background:#fdfcf9;
+    color:var(--ink);transition:.15s;
+  }
+  .field textarea{resize:vertical;min-height:84px}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(184,147,90,.15);background:#fff;
+  }
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:480px){.row2{grid-template-columns:1fr}}
+
+  /* Yes/No pills */
+  .pills{display:flex;gap:10px}
+  .pills label{
+    flex:1;text-align:center;padding:11px;border:1px solid var(--line);
+    border-radius:10px;cursor:pointer;font-size:14px;font-weight:600;
+    background:#fdfcf9;transition:.15s;margin:0;
+  }
+  .pills input{position:absolute;opacity:0;pointer-events:none}
+  .pills input:checked + label,.pills label.on{
+    background:var(--ink);color:#fff;border-color:var(--ink);
+  }
+
+  .submit{
+    width:100%;padding:15px;margin-top:6px;border:none;cursor:pointer;
+    background:linear-gradient(150deg,var(--ink),#1c3340);color:#fff;
+    font-family:inherit;font-size:16px;font-weight:600;border-radius:11px;
+    transition:.2s;box-shadow:0 10px 24px -10px rgba(14,26,36,.55);
+  }
+  .submit:hover{transform:translateY(-1px)}
+  .submit:disabled{opacity:.6;cursor:wait;transform:none}
+
+  .note{text-align:center;font-size:12px;color:var(--ink-soft);margin-top:16px}
+
+  /* Alerts */
+  .alert{padding:14px 16px;border-radius:10px;font-size:14px;font-weight:500;margin-bottom:18px;display:none}
+  .alert.ok{background:#e7f4ee;color:var(--ok);border:1px solid #bfe3d1;display:block}
+  .alert.err{background:#fbeaea;color:var(--err);border:1px solid #f0cccc;display:block}
+
+  [data-en]{display:none}
+  html[data-lang=en] [data-ar]{display:none}
+  html[data-lang=en] [data-en]{display:inline}
+  html[data-lang=en] [data-en].block{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="mark">ت</div>
+    <div class="name">
+      <span data-ar>التمكين الريادي</span><span data-en class="block" style="letter-spacing:.2px;text-transform:none;font-size:17px;color:var(--ink)">Altamkin Alriyadi</span>
+      <span data-ar>ALTAMKIN ALRIYADI</span><span data-en>Empowering Investors</span>
+    </div>
+  </div>
+
+  <div class="langbar">
+    <button id="btn-ar" class="active" onclick="setLang('ar')">عربي</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow"><span data-ar>تسجيل عميل جديد</span><span data-en>New Customer</span></div>
+    <h1><span data-ar>إضافة عميل إلى النظام</span><span data-en>Add a customer to the system</span></h1>
+    <p><span data-ar>سجّل بيانات العميل ليتم حفظها ومتابعتها.</span><span data-en>Enter the customer details to save and follow up.</span></p>
+  </div>
+
+  <div class="card">
+    <div id="alert" class="alert"></div>
+
+    <div class="field">
+      <label><span data-ar>الاسم الكامل</span><span data-en>Full name</span> <span class="req">*</span></label>
+      <input id="name" required>
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label><span data-ar>الجوال / واتساب</span><span data-en>Phone / WhatsApp</span> <span class="req">*</span></label>
+        <input id="phone" inputmode="tel" required>
+      </div>
+      <div class="field">
+        <label><span data-ar>البريد الإلكتروني</span><span data-en>Email</span></label>
+        <input id="email" type="email">
+      </div>
+    </div>
+
+    <div class="field">
+      <label><span data-ar>اسم الشركة</span><span data-en>Company name</span></label>
+      <input id="company">
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label><span data-ar>الجنسية</span><span data-en>Nationality</span></label>
+        <input id="nationality">
+      </div>
+      <div class="field">
+        <label><span data-ar>قيمة الصفقة (تقديري)</span><span data-en>Deal value (est.)</span></label>
+        <input id="value" inputmode="numeric" placeholder="SAR">
+      </div>
+    </div>
+
+    <div class="field">
+      <label><span data-ar>هل هو مقيم في السعودية؟</span><span data-en>Resident in Saudi Arabia?</span></label>
+      <div class="pills">
+        <input type="radio" name="res" id="res-y" value="نعم / Yes"><label for="res-y"><span data-ar>نعم</span><span data-en>Yes</span></label>
+        <input type="radio" name="res" id="res-n" value="لا / No"><label for="res-n"><span data-ar>لا</span><span data-en>No</span></label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label><span data-ar>الخدمة المطلوبة</span><span data-en>Service needed</span> <span class="req">*</span></label>
+      <select id="service" required>
+        <option value="" disabled selected data-ar>— اختر الخدمة —</option>
+        <option value="" disabled data-en>— Select a service —</option>
+        <option value="تأسيس شركة لمستثمر أجنبي / Foreign investor setup">تأسيس شركة لمستثمر أجنبي — Foreign investor setup</option>
+        <option value="ملكية أجنبية 100% / 100% foreign ownership">ملكية أجنبية 100% — 100% foreign ownership</option>
+        <option value="تأسيس شركة لمقيم / Resident setup">تأسيس شركة لمقيم — Resident setup</option>
+        <option value="تأسيس شركة لغير مقيم / Non-resident setup">تأسيس شركة لغير مقيم — Non-resident setup</option>
+        <option value="استشارة استثمارية / Investment consultation">استشارة استثمارية — Investment consultation</option>
+        <option value="خدمات ما بعد التأسيس / Post-incorporation">خدمات ما بعد التأسيس — Post-incorporation</option>
+        <option value="أخرى / Other">أخرى — Other</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label><span data-ar>ملاحظات عن العميل / المشروع</span><span data-en>Notes about the customer / project</span></label>
+      <textarea id="notes"></textarea>
+    </div>
+
+    <button id="submit" class="submit" onclick="save()">
+      <span data-ar>حفظ العميل</span><span data-en>Save customer</span>
+    </button>
+
+    <p class="note">
+      <span data-ar>تُحفظ البيانات مباشرة في ملف Google Sheets الخاص بك.</span>
+      <span data-en>Saved directly to your Google Sheet.</span>
+    </p>
+  </div>
+</div>
+
+<script>
+/* ====== PASTE YOUR GOOGLE APPS SCRIPT URL HERE ====== */
+const SHEET_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
+/* ==================================================== */
+
+function setLang(l){
+  document.documentElement.setAttribute("data-lang",l);
+  document.documentElement.setAttribute("lang",l);
+  document.documentElement.setAttribute("dir", l==="ar"?"rtl":"ltr");
+  document.getElementById("btn-ar").classList.toggle("active",l==="ar");
+  document.getElementById("btn-en").classList.toggle("active",l==="en");
+}
+
+function showAlert(type,msgAr,msgEn){
+  const a=document.getElementById("alert");
+  const en=document.documentElement.getAttribute("data-lang")==="en";
+  a.className="alert "+type;
+  a.textContent=en?msgEn:msgAr;
+  a.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+async function save(){
+  const name=document.getElementById("name").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const service=document.getElementById("service").value;
+
+  if(!name||!phone||!service){
+    showAlert("err","الرجاء تعبئة الحقول المطلوبة (*).","Please fill the required fields (*).");
+    return;
+  }
+
+  const resEl=document.querySelector('input[name="res"]:checked');
+  const data={
+    name, phone,
+    email:document.getElementById("email").value.trim(),
+    company:document.getElementById("company").value.trim(),
+    nationality:document.getElementById("nationality").value.trim(),
+    value:document.getElementById("value").value.trim(),
+    resident:resEl?resEl.value:"",
+    service,
+    notes:document.getElementById("notes").value.trim(),
+    status:"جديد / New"
+  };
+
+  const btn=document.getElementById("submit");
+  btn.disabled=true;
+
+  if(SHEET_URL.includes("PASTE_YOUR")){
+    showAlert("err","لم يتم ربط Google Sheets بعد. راجع دليل الإعداد.","Google Sheet not connected yet. See the setup guide.");
+    btn.disabled=false;
+    return;
+  }
+
+  try{
+    await fetch(SHEET_URL,{
+      method:"POST",
+      mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify(data)
+    });
+    showAlert("ok","✓ تم حفظ العميل بنجاح.","✓ Customer saved successfully.");
+    document.querySelectorAll("input,textarea").forEach(el=>{el.value="";el.checked=false});
+    document.getElementById("service").selectedIndex=0;
+  }catch(e){
+    showAlert("err","تعذّر الحفظ. تحقق من الاتصال بالإنترنت.","Couldn't save. Check your internet connection.");
+  }finally{
+    btn.disabled=false;
+  }
+}
+</script>
+</body>
+</html>
