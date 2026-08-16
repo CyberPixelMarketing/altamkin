@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>التمكين الريادي | تأسيس الشركات في السعودية</title>
+<meta name="description" content="شركة التمكين الريادي — نساعد المستثمرين الأجانب والمقيمين وغير المقيمين على تأسيس شركاتهم في المملكة العربية السعودية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#127749;
+  --primary-600:#0f6a41;
+  --primary-700:#0c5735;
+  --primary-800:#0a4a2d;
+  --primary-950:#062d1c;
+  --mint:#e8f5ee;
+  --mint-2:#d4ecdf;
+  --mint-strong:#8fd0ac;
+  --gold:#c8a558;
+  --gold-soft:#f6efdf;
+  --ink:#152219;
+  --text:#2c3b32;
+  --muted:#5f7267;
+  --faint:#8a9a90;
+  --line:#e3eae5;
+  --line-2:#d3ddd7;
+  --bg:#f6f8f7;
+  --bg-2:#eef3f0;
+  --r-sm:10px; --r-md:16px; --r-lg:22px; --r-full:999px;
+  --sh-sm:0 1px 3px rgba(12,60,38,.06),0 1px 2px rgba(12,60,38,.04);
+  --sh-md:0 6px 24px rgba(12,60,38,.09);
+  --sh-lg:0 18px 48px rgba(6,45,28,.16);
+  --header-h:78px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.9;overflow-x:hidden;touch-action:manipulation}
+.en{display:none!important}
+body.lang-en .en{display:revert!important}
+body.lang-en .ar{display:none!important}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+section{position:relative;scroll-margin-top:calc(var(--header-h) + 14px)}
+
+/* RTL: mirror all navigation arrows so they point the right direction */
+html[dir="rtl"] .s-arrow svg,
+html[dir="rtl"] .car-btn svg{transform:scaleX(-1)}
+
+.sadu-light{position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23127749' stroke-opacity='0.045' stroke-width='1.3'%3E%3Cpath d='M26 4 48 26 26 48 4 26Z'/%3E%3Cpath d='M26 15 37 26 26 37 15 26Z'/%3E%3C/g%3E%3C/svg%3E")}
+.sadu-white{position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.08' stroke-width='1.3'%3E%3Cpath d='M26 4 48 26 26 48 4 26Z'/%3E%3Cpath d='M26 15 37 26 26 37 15 26Z'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ============ buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:11px 28px;border-radius:var(--r-full);font-weight:800;font-size:.95rem;border:0;transition:.22s;white-space:nowrap}
+.btn svg{flex:none}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 4px 14px rgba(18,119,73,.28)}
+.btn-primary:hover{background:var(--primary-700);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--primary-800)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.btn-glass{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.45);backdrop-filter:blur(6px)}
+.btn-glass:hover{background:rgba(255,255,255,.26)}
+
+/* ============ HEADER: fixed / transparent at top / hide on scroll-down / solid on scroll-up ============ */
+header.site{
+  position:fixed;top:0;inset-inline:0;z-index:80;height:var(--header-h);
+  background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--sh-sm);
+  transition:transform .35s ease,background .3s ease,border-color .3s,box-shadow .3s;
+}
+header.site.hide{transform:translateY(-102%)}
+header.site.transparent{background:transparent;border-color:transparent;box-shadow:none}
+.nav{display:flex;align-items:center;justify-content:space-between;height:100%;gap:16px}
+.brand img{height:48px;width:auto;display:block;transition:filter .3s}
+header.transparent .brand img{filter:brightness(0) invert(1)}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{font-size:.92rem;font-weight:700;color:var(--muted);padding:9px 13px;border-radius:var(--r-full);transition:.2s;white-space:nowrap}
+.nav-links a:hover{color:var(--primary-700);background:var(--mint)}
+header.transparent .nav-links a{color:rgba(255,255,255,.88)}
+header.transparent .nav-links a:hover{color:#fff;background:rgba(255,255,255,.14)}
+.nav-cta{display:flex;align-items:center;gap:12px;flex:none}
+.lang-switch{display:flex;align-items:center;gap:2px;font-weight:800;font-size:.9rem}
+.lang-switch button{border:0;background:none;padding:8px 7px;color:var(--faint);font-weight:800;font-size:.9rem;border-radius:8px;transition:.2s;min-width:40px}
+.lang-switch button:hover{color:var(--primary)}
+.lang-switch button.active{color:var(--primary-700)}
+.lang-switch .pipe{color:var(--line-2);font-weight:400}
+header.transparent .lang-switch button{color:rgba(255,255,255,.65)}
+header.transparent .lang-switch button.active{color:#fff}
+header.transparent .lang-switch .pipe{color:rgba(255,255,255,.35)}
+header.transparent .btn-primary{background:#fff;color:var(--primary-800);box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.nav-toggle{display:none;border:0;background:none;padding:10px;min-width:44px;min-height:44px}
+.nav-toggle span{display:block;width:23px;height:2.5px;background:var(--primary-800);margin:5px auto;border-radius:3px;transition:.3s}
+header.transparent .nav-toggle span{background:#fff}
+header.transparent .nav-toggle.open span{background:var(--primary-800)}
+
+/* ============ HERO SLIDER ============ */
+.hero{position:relative;overflow:hidden;background:var(--primary-950)}
+.slider{position:relative;min-height:660px}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s;display:flex;align-items:center;color:#fff}
+.slide.active{opacity:1;visibility:visible;z-index:2}
+.slide .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 7s ease}
+.slide.active .bg{transform:scale(1)}
+.slide .overlay{position:absolute;inset:0}
+.slide-1 .overlay{background:linear-gradient(to top,rgba(6,45,28,.94) 8%,rgba(8,58,36,.72) 45%,rgba(6,45,28,.48))}
+.slide-2 .bg{background:linear-gradient(140deg,var(--primary-950),var(--primary-700) 60%,#1a8a58)}
+.slide-3 .bg{background:linear-gradient(140deg,#08301f,#0c5735 55%,var(--primary))}
+.slide-inner{position:relative;z-index:3;width:100%;padding:calc(var(--header-h) + 66px) 0 132px}
+.slide-content{max-width:760px}
+.slide.center-mode .slide-content{max-width:840px;margin:0 auto;text-align:center}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.32);padding:7px 18px;border-radius:var(--r-full);font-size:.84rem;font-weight:800;color:#d9efe3;margin-bottom:20px;backdrop-filter:blur(4px)}
+.hero-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,165,88,.55)}50%{box-shadow:0 0 0 8px rgba(200,165,88,0)}}
+.slide h1,.slide h2.h1{font-size:clamp(1.75rem,4.4vw,3.1rem);font-weight:800;line-height:1.5;margin-bottom:16px}
+.slide .hl{color:var(--mint-strong)}
+.slide p.lead{font-size:clamp(.98rem,1.7vw,1.15rem);color:#d7e9de;max-width:640px;margin-bottom:26px}
+.slide.center-mode p.lead{margin-inline:auto}
+.slide-btns{display:flex;gap:12px;flex-wrap:wrap}
+.slide.center-mode .slide-btns{justify-content:center}
+.slide .logo-badge{display:inline-flex;background:#fff;border-radius:var(--r-md);padding:14px 22px;margin-bottom:26px;box-shadow:var(--sh-lg)}
+.slide .logo-badge img{height:74px}
+.slider-arrows{position:absolute;inset-inline:0;top:50%;transform:translateY(-50%);z-index:5;display:flex;justify-content:space-between;padding:0 18px;pointer-events:none}
+.s-arrow{pointer-events:auto;width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;transition:.25s;backdrop-filter:blur(4px)}
+.s-arrow:hover{background:#fff;color:var(--primary-800)}
+.s-arrow svg{width:20px;height:20px}
+.slider-dots{position:absolute;bottom:88px;inset-inline:0;display:flex;justify-content:center;gap:9px;z-index:5}
+.s-dot{width:10px;height:10px;border-radius:var(--r-full);border:0;background:rgba(255,255,255,.4);transition:.3s;padding:0}
+.s-dot.active{width:32px;background:var(--gold)}
+.hero-wave{position:absolute;bottom:-1px;inset-inline:0;z-index:4}
+.hero-wave svg{display:block;width:100%;height:64px}
+
+/* ============ stats band ============ */
+.stats-band{margin-top:-58px;position:relative;z-index:10;padding-bottom:8px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;box-shadow:var(--sh-md);display:flex;flex-direction:column;gap:2px;transition:.25s}
+.stat-card:hover{transform:translateY(-4px);border-color:var(--mint-2)}
+.stat-card b{font-size:1.5rem;font-weight:800;color:var(--primary-700);line-height:1.35}
+.stat-card span{font-size:.84rem;color:var(--muted);font-weight:600}
+.stat-card .tag{align-self:flex-start;font-size:.7rem;font-weight:800;color:var(--primary);background:var(--mint);border-radius:var(--r-full);padding:2px 12px;margin-bottom:8px}
+
+/* ============ sections ============ */
+.section{padding:76px 0}
+.section.compact{padding:58px 0}
+.section.tint{background:var(--bg-2)}
+.section.white{background:#fff}
+.section-head{max-width:760px;margin-bottom:38px}
+.section-head.center{margin-inline:auto;text-align:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--primary-700);font-size:.8rem;font-weight:800;padding:6px 18px;border-radius:var(--r-full);margin-bottom:14px}
+.section-head h2{font-size:clamp(1.45rem,3vw,2.15rem);font-weight:800;line-height:1.55;color:var(--ink);margin-bottom:10px}
+.section-head p{color:var(--muted);font-size:.98rem}
+
+/* ============ SERVICES ============ */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:.3s;position:relative}
+.svc:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--mint-2)}
+.svc-top{background:linear-gradient(135deg,var(--primary-800),var(--primary-600));padding:22px 24px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.svc-top::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 4 40 22 22 40 4 22Z' fill='none' stroke='%23ffffff' stroke-opacity='0.09' stroke-width='1.2'/%3E%3C/svg%3E")}
+.svc-top .sicon{width:52px;height:52px;flex:none;border-radius:14px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
+.svc-top .sicon svg{width:25px;height:25px;stroke:#fff}
+.svc-top .snum{position:absolute;inset-inline-end:16px;top:50%;transform:translateY(-50%);font-size:2.6rem;font-weight:900;color:rgba(255,255,255,.14);line-height:1;z-index:1}
+.svc-top h3{color:#fff;font-size:1.02rem;font-weight:800;line-height:1.55;position:relative;z-index:2}
+.svc-body{padding:20px 24px 24px;display:flex;flex-direction:column;flex:1}
+.svc-body p{font-size:.9rem;color:var(--muted);flex:1}
+.svc-body .goal{margin-top:14px;font-size:.84rem;font-weight:800;color:var(--primary-700);display:flex;gap:7px;align-items:center}
+.svc-body .goal svg{width:16px;height:16px;stroke:var(--gold);flex:none}
+.svc-questions{margin-top:10px}
+.svc-questions li{font-size:.86rem;color:var(--text);padding:4px 0;display:flex;gap:8px;align-items:flex-start}
+.svc-questions li::before{content:"؟";color:var(--gold);font-weight:900;flex:none;line-height:1.8}
+body.lang-en .svc-questions li::before{content:"?"}
+
+/* ============ CAROUSEL ============ */
+.carousel{position:relative}
+.car-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:26px;flex-wrap:wrap}
+.car-head .section-head{margin-bottom:0}
+.car-nav{display:flex;gap:9px;flex:none}
+.car-btn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line-2);background:#fff;color:var(--primary-700);display:flex;align-items:center;justify-content:center;transition:.22s}
+.car-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.car-btn svg{width:19px;height:19px}
+.car-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.car-track::-webkit-scrollbar{display:none}
+.car-track > *{flex:0 0 300px;scroll-snap-align:start}
+.car-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px;transition:.25s}
+.car-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--mint-2)}
+.car-card .icon-box{width:50px;height:50px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.car-card .icon-box svg{width:24px;height:24px;stroke:var(--primary-600)}
+.car-card h3{font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:7px;line-height:1.6}
+.car-card p{font-size:.87rem;color:var(--muted)}
+.car-card .cnum{width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;font-weight:900;font-size:1.05rem;display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 6px 14px rgba(18,119,73,.3)}
+
+/* ============ story ============ */
+.story-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:start}
+.story-visual{position:sticky;top:calc(var(--header-h) + 24px)}
+.story-photo{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh-md)}
+.story-photo img{display:block;width:100%}
+.founder-tag{background:var(--primary-800);color:#fff;border-radius:var(--r-md);padding:18px 24px;margin-top:-44px;margin-inline-start:22px;position:relative;max-width:88%;box-shadow:var(--sh-md)}
+.founder-tag b{display:block;font-size:1.05rem;font-weight:800}
+.founder-tag span{font-size:.82rem;color:var(--mint-strong)}
+.story-body p{margin-bottom:14px;color:var(--text);font-size:1rem}
+.story-body p strong{color:var(--ink)}
+.story-steps{display:flex;gap:9px;margin:20px 0;flex-wrap:wrap}
+.chip2{background:var(--mint);border:1px solid var(--mint-2);color:var(--primary-700);font-weight:700;font-size:.86rem;padding:7px 18px;border-radius:var(--r-full)}
+.pull{background:var(--mint);border:1px solid var(--mint-2);border-inline-start:4px solid var(--gold);border-radius:var(--r-sm);padding:18px 22px;margin-top:8px;font-weight:800;color:var(--primary-800);font-size:1.04rem}
+
+/* ============ read more ============ */
+.collapsible{position:relative;overflow:hidden;transition:max-height .55s ease}
+.collapsible::after{content:"";position:absolute;bottom:0;inset-inline:0;height:110px;background:linear-gradient(to top,var(--fade-color,#fff) 18%,transparent);opacity:1;transition:opacity .4s;pointer-events:none}
+.collapsible.expanded::after{opacity:0}
+.readmore-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--mint);color:var(--primary-700);border:1.5px solid var(--mint-2);border-radius:var(--r-full);padding:10px 26px;font-weight:800;font-size:.9rem;transition:.22s;min-height:44px}
+.readmore-btn:hover{background:var(--mint-2)}
+.readmore-btn svg{width:16px;height:16px;transition:transform .3s}
+.readmore-btn.open svg{transform:rotate(180deg)}
+.readmore-btn .less{display:none}
+.readmore-btn.open .more{display:none}
+.readmore-btn.open .less{display:inline}
+
+/* ============ founder ============ */
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.quote-card{background:linear-gradient(150deg,var(--primary-950),var(--primary-700));color:#fff;border-radius:var(--r-lg);padding:40px 36px;position:relative;overflow:hidden;box-shadow:var(--sh-lg)}
+.quote-card .qmark{font-size:5.5rem;line-height:1;color:rgba(200,165,88,.55);font-family:Georgia,serif;position:absolute;top:12px;inset-inline-end:26px}
+.quote-card blockquote{font-size:1.18rem;font-weight:700;line-height:2;position:relative;z-index:2}
+.quote-card .fq-name{margin-top:24px;display:flex;align-items:center;gap:13px;position:relative;z-index:2}
+.quote-card .fq-name img{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:50%;padding:7px;flex:none}
+.quote-card .fq-name b{display:block;font-weight:800}
+.quote-card .fq-name span{font-size:.8rem;color:var(--mint-strong)}
+.founder-body p{margin-bottom:13px;color:var(--text)}
+.mvp{display:grid;gap:13px;margin-top:22px}
+.mvp-item{display:flex;gap:15px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-md);padding:17px 19px;transition:.25s}
+.mvp-item:hover{border-color:var(--mint-2);box-shadow:var(--sh-sm)}
+.mvp-item .micon{width:44px;height:44px;flex:none;border-radius:12px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center}
+.mvp-item .micon svg{width:21px;height:21px;stroke:var(--gold)}
+.mvp-item b{display:block;color:var(--ink);font-size:.96rem;font-weight:800;margin-bottom:2px}
+.mvp-item p{font-size:.86rem;color:var(--muted);margin:0}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:12px;overflow:hidden;transition:.3s}
+.faq-item.open{border-color:var(--primary);box-shadow:var(--sh-sm)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;background:none;border:0;font-size:1rem;font-weight:800;color:var(--ink);text-align:start;min-height:48px}
+.faq-q .fico{width:32px;height:32px;flex:none;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;transition:.3s}
+.faq-q .fico svg{width:15px;height:15px;stroke:var(--primary-700);transition:.3s}
+.faq-item.open .fico{background:var(--primary)}
+.faq-item.open .fico svg{stroke:#fff;transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a > div{padding:0 24px 22px;color:var(--muted);font-size:.94rem}
+
+/* ============ contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:stretch}
+.contact-info h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:800;color:var(--ink);line-height:1.6;margin-bottom:14px}
+.contact-info > p{color:var(--muted);margin-bottom:26px}
+.c-item{display:flex;gap:15px;align-items:flex-start;margin-bottom:20px}
+.c-item .cicon{width:48px;height:48px;flex:none;border-radius:13px;background:var(--mint);display:flex;align-items:center;justify-content:center}
+.c-item .cicon svg{width:22px;height:22px;stroke:var(--primary-600)}
+.c-item b{display:block;font-size:.93rem;color:var(--ink);font-weight:800}
+.c-item span,.c-item a{font-size:.9rem;color:var(--muted)}
+.c-item a.ltr{direction:ltr;unicode-bidi:embed}
+.c-item a:hover{color:var(--primary-700)}
+.cta-panel{background:linear-gradient(150deg,var(--primary-950),var(--primary-700));color:#fff;border-radius:var(--r-lg);padding:44px 38px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;box-shadow:var(--sh-lg)}
+.cta-panel h3{font-size:1.35rem;font-weight:800;line-height:1.7;margin-bottom:12px;position:relative;z-index:2}
+.cta-panel p{color:#cfe4d8;font-size:.95rem;margin-bottom:26px;position:relative;z-index:2}
+.cta-panel .cta-btns{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+
+/* ============ MODAL ============ */
+.modal-scrim{position:fixed;inset:0;z-index:200;background:rgba(6,29,18,.6);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:18px}
+.modal-scrim.open{display:flex;animation:scrimIn .25s}
+@keyframes scrimIn{from{opacity:0}to{opacity:1}}
+.modal{background:#fff;border-radius:var(--r-lg);max-width:640px;width:100%;max-height:calc(100dvh - 36px);overflow-y:auto;position:relative;padding:36px 32px 30px;box-shadow:var(--sh-lg);animation:modalIn .32s ease}
+@keyframes modalIn{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:16px;inset-inline-end:16px;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--muted);display:flex;align-items:center;justify-content:center;transition:.2s;z-index:5}
+.modal-close:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.modal-close svg{width:18px;height:18px}
+.modal h3{font-size:1.25rem;font-weight:800;color:var(--ink);margin-bottom:6px;padding-inline-end:44px}
+.modal .modal-sub{font-size:.9rem;color:var(--muted);margin-bottom:22px}
+
+/* ============ form ============ */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.fgroup{display:flex;flex-direction:column;gap:6px}
+.fgroup.full{grid-column:1/-1}
+.fgroup label{font-size:.87rem;font-weight:800;color:var(--ink)}
+.fgroup label .req{color:#c0392b}
+.fgroup input,.fgroup select,.fgroup textarea{border:1.5px solid var(--line-2);border-radius:12px;padding:12px 15px;font-family:inherit;font-size:16px;background:var(--bg);color:var(--ink);transition:.2s;width:100%;min-height:48px}
+.fgroup input:focus,.fgroup select:focus,.fgroup textarea:focus{outline:none;border-color:var(--primary);background:#fff;box-shadow:0 0 0 3.5px rgba(18,119,73,.13)}
+.fgroup textarea{resize:vertical;min-height:96px}
+/* yes/no pills — native radio fully hidden; selected pill turns solid green with a check mark */
+.radio-row{display:flex;gap:11px}
+.radio-pill{flex:1;position:relative;display:block}
+.radio-pill input{position:absolute;opacity:0;width:1px;height:1px;margin:0;padding:0;border:0;pointer-events:none;appearance:none;-webkit-appearance:none;-moz-appearance:none;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden}
+.radio-pill span{position:relative;display:flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid var(--line-2);border-radius:12px;font-weight:800;font-size:.95rem;cursor:pointer;background:var(--bg);transition:.2s;color:var(--muted);user-select:none}
+.radio-pill span::before{content:"✓";position:absolute;inset-inline-start:16px;font-size:1rem;font-weight:900;opacity:0;transform:scale(.4);transition:.2s;line-height:1}
+.radio-pill span:hover{border-color:var(--mint-strong);background:var(--mint)}
+.radio-pill input:checked + span{background:var(--primary);color:#fff;border-color:var(--primary);box-shadow:0 5px 14px rgba(18,119,73,.3)}
+.radio-pill input:checked + span::before{opacity:1;transform:scale(1)}
+.radio-pill input:focus-visible + span{box-shadow:0 0 0 3.5px rgba(18,119,73,.25)}
+.form-note{font-size:.79rem;color:var(--muted);margin-top:13px;display:flex;gap:7px;align-items:flex-start}
+.form-note svg{width:15px;height:15px;stroke:var(--primary);flex:none;margin-top:4px}
+.form-success{display:none;background:var(--mint);border:1.5px solid var(--mint-strong);color:var(--primary-800);border-radius:12px;padding:15px 19px;margin-bottom:18px;font-weight:800;font-size:.92rem}
+.form-success.show{display:block;animation:fadeUp .5s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ============ footer ============ */
+footer{background:var(--primary-950);color:#9fc2ae;position:relative;overflow:hidden}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;padding:64px 0 42px;position:relative;z-index:2}
+.footer-brand img{height:58px;background:#fff;border-radius:14px;padding:8px 14px;margin-bottom:18px}
+.footer-brand p{font-size:.91rem;max-width:380px;margin-bottom:16px}
+.footer-brand .fb-name b{color:#fff;display:block;font-weight:800}
+.footer-brand .fb-name span{font-size:.82rem;color:var(--mint-strong)}
+.socials{display:flex;gap:10px;margin-top:16px}
+.socials a{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:.22s}
+.socials a:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-3px)}
+.socials svg{width:19px;height:19px;fill:#fff}
+footer h4{color:#fff;font-size:1rem;font-weight:800;margin-bottom:16px}
+.footer-links li{margin-bottom:8px}
+.footer-links a{font-size:.9rem;transition:.2s;display:inline-flex;align-items:center;gap:8px;min-height:32px}
+.footer-links a::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s}
+.footer-links a:hover{color:#fff}
+.footer-links a:hover::before{opacity:1}
+.footer-contact li{margin-bottom:13px;display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
+.footer-contact svg{width:17px;height:17px;stroke:var(--mint-strong);flex:none;margin-top:6px}
+.footer-contact a:hover{color:#fff}
+.footer-contact a.ltr{direction:ltr;unicode-bidi:embed}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;position:relative;z-index:2}
+.footer-bottom .container{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-bottom .tagline{color:var(--gold);font-weight:800;font-size:.9rem}
+.footer-bottom .copy{font-size:.82rem}
+
+/* ============ floating ============ */
+.wa-float{position:fixed;bottom:22px;inset-inline-start:22px;z-index:90;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.42);transition:.3s}
+.wa-float:hover{transform:scale(1.09)}
+.wa-float svg{width:31px;height:31px;fill:#fff}
+.wa-float .wring{position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.2s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.55);opacity:0}}
+.to-top{position:fixed;bottom:22px;inset-inline-end:22px;z-index:90;width:48px;height:48px;border-radius:14px;background:var(--primary);color:#fff;border:0;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--sh-md)}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top svg{width:20px;height:20px;stroke:#fff}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ================= responsive ================= */
+@media(max-width:1024px){
+  .slider{min-height:600px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .story-grid,.founder-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .story-visual{position:static;max-width:540px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .car-track > *{flex-basis:280px}
+}
+@media(max-width:720px){
+  .nav-links{
+    position:fixed;top:0;inset-inline-end:0;height:100dvh;width:min(320px,85vw);
+    background:#fff;flex-direction:column;align-items:stretch;padding:92px 22px 26px;gap:4px;
+    box-shadow:0 0 60px rgba(0,0,0,.18);transform:translateX(105%);transition:.35s;z-index:70;overflow-y:auto;
+  }
+  html[dir="rtl"] .nav-links{transform:translateX(-105%)}
+  .nav-links.open{transform:translateX(0)!important}
+  .nav-links a{padding:14px 16px;font-size:1rem;border-bottom:1px solid var(--bg-2);border-radius:10px;min-height:48px;display:flex;align-items:center;color:var(--muted)!important}
+  .nav-toggle{display:block;position:relative;z-index:80}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .nav-cta .btn{display:none}
+  .brand img{height:40px}
+  .slider{min-height:560px}
+  .slide-inner{padding:calc(var(--header-h) + 44px) 0 126px}
+  .slide .logo-badge img{height:56px}
+  .slide-btns .btn{flex:1;min-width:0}
+  .slider-arrows{display:none}
+  .slider-dots{bottom:78px}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:11px}
+  .stat-card{padding:16px 15px}
+  .stat-card b{font-size:1.12rem}
+  .svc-grid{grid-template-columns:1fr}
+  .section{padding:56px 0}
+  .section.compact{padding:44px 0}
+  .footer-top{grid-template-columns:1fr;gap:34px}
+  .quote-card{padding:32px 24px}
+  .modal{padding:28px 18px 22px;border-radius:18px}
+  .form-grid{grid-template-columns:1fr}
+  .fgroup.full{grid-column:auto}
+  .car-track > *{flex-basis:min(300px,82vw)}
+  .car-head{align-items:center}
+  .founder-tag{margin-inline-start:12px;max-width:92%}
+  .cta-panel{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ======= HEADER ======= -->
+<header class="site transparent" id="siteHeader">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Altamkin Alriyadi — التمكين الريادي">
+      <img data-img="logo" alt="شعار التمكين الريادي">
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+      <a href="#services"><span class="ar">خدماتنا</span><span class="en">Services</span></a>
+      <a href="#why"><span class="ar">من نحن</span><span class="en">About Us</span></a>
+      <a href="#story"><span class="ar">قصتي</span><span class="en">My Story</span></a>
+      <a href="#process"><span class="ar">كيف نعمل</span><span class="en">How We Work</span></a>
+      <a href="#faq"><span class="ar">الأسئلة الشائعة</span><span class="en">FAQ</span></a>
+      <a href="#contact"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="nav-cta">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="btnEn" onclick="setLang('en')" aria-label="English">EN</button>
+        <span class="pipe">|</span>
+        <button type="button" id="btnAr" class="active" onclick="setLang('ar')" aria-label="العربية">عربي</button>
+      </div>
+      <button class="btn btn-primary open-form" type="button">
+        <span class="ar">استشارة أولية</span><span class="en">Consultation</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="القائمة / Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ======= HERO SLIDER ======= -->
+<section class="hero" id="home">
+  <div class="slider" id="heroSlider">
+
+    <div class="slide slide-1 active">
+      <div class="bg" data-bg="hero"></div>
+      <div class="overlay"></div>
+      <div class="sadu-white"></div>
+      <div class="container slide-inner">
+        <div class="slide-content">
+          <div class="hero-chip"><span class="dot"></span>
+            <span class="ar">شريكك لدخول السوق السعودي</span>
+            <span class="en">Your partner into the Saudi market</span>
+          </div>
+          <h1>
+            <span class="ar">من تجربة شخصية…<br>إلى <span class="hl">تمكين المستثمرين</span> في السعودية</span>
+            <span class="en">From a personal journey…<br>to <span class="hl">empowering investors</span> in Saudi Arabia</span>
+          </h1>
+          <p class="lead">
+            <span class="ar">نساعد المستثمرين الأجانب والمقيمين وغير المقيمين على تأسيس شركاتهم في المملكة العربية السعودية، وفهم الطريق الصحيح للانطلاق والاستثمار والنمو.</span>
+            <span class="en">We help foreign investors, residents, and non-residents establish their companies in Saudi Arabia — and understand the right path to launch, invest, and grow.</span>
+          </p>
+          <div class="slide-btns">
+            <button type="button" class="btn btn-white open-form">
+              <span class="ar">ابدأ رحلتك الاستثمارية</span><span class="en">Start Your Journey</span>
+            </button>
+            <a data-wa="consult" target="_blank" rel="noopener" class="btn btn-glass">
+              <span class="ar">تحدث مع مستشار</span><span class="en">Talk to a Consultant</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide slide-2">
+      <div class="bg"></div>
+      <div class="sadu-white"></div>
+      <div class="container slide-inner">
+        <div class="slide-content">
+          <div class="hero-chip"><span class="dot"></span>
+            <span class="ar">قصة حقيقية… لا نظرية</span>
+            <span class="en">A real story… not theory</span>
+          </div>
+          <h2 class="h1">
+            <span class="ar">عشت تحديات نظام الكفالة…<br>واليوم أمتلك شركتي <span class="hl">بنسبة 100%</span></span>
+            <span class="en">I lived the sponsorship challenges…<br>today I own my company <span class="hl">100%</span></span>
+          </h2>
+          <p class="lead">
+            <span class="ar">أنا مبارك الشيخ، رئيس مجلس إدارة شركة التمكين الريادي. بحثت، تعلمت، خضت التجربة، وفهمت الطريق. ما عشته بالأمس… أصبح خبرة أقدمها لك اليوم.</span>
+            <span class="en">I'm Mubarak Alshaikh, Chairman of Altamkin Alriyadi. I researched, learned, went through the journey, and understood the path. What I lived yesterday is the expertise I offer you today.</span>
+          </p>
+          <div class="slide-btns">
+            <button type="button" class="btn btn-white open-form"><span class="ar">احجز استشارتك</span><span class="en">Book Your Consultation</span></button>
+            <a data-wa="consult" target="_blank" rel="noopener" class="btn btn-glass"><span class="ar">تحدث مع مستشار</span><span class="en">Talk to a Consultant</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide slide-3 center-mode">
+      <div class="bg"></div>
+      <div class="sadu-white"></div>
+      <div class="container slide-inner">
+        <div class="slide-content">
+          <div class="logo-badge"><img data-img="logo" alt="التمكين الريادي"></div>
+          <h2 class="h1">
+            <span class="ar">لا تبدأ بالإجراءات<br>قبل أن <span class="hl">تفهم الصورة كاملة</span></span>
+            <span class="en">Don't start procedures<br>before you <span class="hl">see the full picture</span></span>
+          </h2>
+          <p class="lead">
+            <span class="ar">تأسيس الشركات للأجانب والمقيمين وغير المقيمين • ملكية أجنبية 100% • استشارات استثمارية • خدمات ما بعد التأسيس</span>
+            <span class="en">Company formation for foreigners, residents & non-residents • 100% foreign ownership • Investment advisory • Post-setup services</span>
+          </p>
+          <div class="slide-btns">
+            <button type="button" class="btn btn-white open-form"><span class="ar">ابدأ باستشارة أولية</span><span class="en">Start With a Consultation</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-arrows">
+      <button class="s-arrow" id="sPrev" aria-label="السابق / Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="s-arrow" id="sNext" aria-label="التالي / Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,36 C240,72 480,0 720,22 C960,44 1200,56 1440,18 L1440,64 L0,64 Z" fill="#f6f8f7"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ======= STATS BAND ======= -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card rv">
+        <span class="tag"><span class="ar">ملكية</span><span class="en">Ownership</span></span>
+        <b>100%</b>
+        <span class="ar">ملكية أجنبية ممكنة وفق الأنظمة</span><span class="en">Foreign ownership possible per regulations</span>
+      </div>
+      <div class="stat-card rv" style="transition-delay:.06s">
+        <span class="tag"><span class="ar">خبرة</span><span class="en">Experience</span></span>
+        <b class="ar">تجربة واقعية</b><b class="en">Real-Life</b>
+        <span class="ar">خبرة معاشة لا نظرية</span><span class="en">Lived experience, not theory</span>
+      </div>
+      <div class="stat-card rv" style="transition-delay:.12s">
+        <span class="tag"><span class="ar">الاقتصاد</span><span class="en">Economy</span></span>
+        <b class="ar">رؤية 2030</b><b class="en">Vision 2030</b>
+        <span class="ar">فرص اقتصادية متنامية</span><span class="en">Growing economic opportunity</span>
+      </div>
+      <div class="stat-card rv" style="transition-delay:.18s">
+        <span class="tag"><span class="ar">المرافقة</span><span class="en">Support</span></span>
+        <b class="ar">5 خطوات</b><b class="en">5 Steps</b>
+        <span class="ar">من الاستماع حتى ما بعد التأسيس</span><span class="en">From listening to post-setup</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= SERVICES ======= -->
+<section class="section" id="services">
+  <div class="sadu-light"></div>
+  <div class="container" style="position:relative">
+    <div class="section-head center rv">
+      <span class="kicker"><span class="ar">خدماتنا</span><span class="en">OUR SERVICES</span></span>
+      <h2><span class="ar">خدمات متكاملة لرحلة استثمارية واضحة</span><span class="en">Integrated services for a clear investment journey</span></h2>
+      <p><span class="ar">من الاستشارة الأولى وحتى ما بعد التأسيس — نرافقك في كل خطوة.</span><span class="en">From the first consultation to post-incorporation — with you at every step.</span></p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc rv">
+        <div class="svc-top">
+          <div class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1M10 21v-4h4v4"/></svg></div>
+          <h3><span class="ar">تأسيس الشركات للمستثمرين الأجانب</span><span class="en">Company Formation for Foreign Investors</span></h3>
+          <span class="snum">01</span>
+        </div>
+        <div class="svc-body">
+          <p><span class="ar">نساعد المستثمر الأجنبي على فهم الإجراءات والمتطلبات اللازمة لتأسيس شركة في المملكة، من مرحلة دراسة الوضع وحتى استكمال الإجراءات النظامية ذات العلاقة.</span>
+          <span class="en">We help foreign investors understand the procedures and requirements to establish a company in the Kingdom — from the initial case study to completing the relevant regulatory procedures.</span></p>
+        </div>
+      </div>
+      <div class="svc rv" style="transition-delay:.06s">
+        <div class="svc-top">
+          <div class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3><span class="ar">تأسيس شركة بملكية أجنبية 100%</span><span class="en">100% Foreign-Owned Company Setup</span></h3>
+          <span class="snum">02</span>
+        </div>
+        <div class="svc-body">
+          <p><span class="ar">نساعد المستثمرين الراغبين في الدخول إلى السوق السعودي من خلال هيكل ملكية أجنبي مناسب وفق الأنظمة والمتطلبات المعمول بها.</span>
+          <span class="en">We assist investors entering the Saudi market through the right foreign-ownership structure, per applicable regulations and requirements.</span></p>
+          <div class="goal">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            <span class="ar">هدفنا: أن تفهم خياراتك قبل أن تبدأ.</span>
+            <span class="en">Our goal: understand your options before you start.</span>
+          </div>
+        </div>
+      </div>
+      <div class="svc rv" style="transition-delay:.12s">
+        <div class="svc-top">
+          <div class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3><span class="ar">تأسيس الشركات للمقيمين في السعودية</span><span class="en">Company Formation for KSA Residents</span></h3>
+          <span class="snum">03</span>
+        </div>
+        <div class="svc-body">
+          <p><span class="ar">إذا كنت مقيمًا في المملكة ولديك فكرة أو نشاط تجاري وتريد الانتقال إلى مرحلة أكثر استقلالية وتنظيمًا، نساعدك على فهم الخيارات المتاحة لك.</span>
+          <span class="en">A resident of the Kingdom with a business idea or an existing activity, wanting a more independent, structured stage? We help you understand your options.</span></p>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="svc-top">
+          <div class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+          <h3><span class="ar">تأسيس الشركات لغير المقيمين</span><span class="en">Company Formation for Non-Residents</span></h3>
+          <span class="snum">04</span>
+        </div>
+        <div class="svc-body">
+          <p><span class="ar">إذا كنت خارج المملكة وتفكر في دخول السوق السعودي، نساعدك على فهم رحلة المستثمر من خارج السعودية والخطوات اللازمة للبدء.</span>
+          <span class="en">Outside the Kingdom and considering the Saudi market? We help you understand the investor journey from abroad and the steps needed to begin.</span></p>
+        </div>
+      </div>
+      <div class="svc rv" style="transition-delay:.06s">
+        <div class="svc-top">
+          <div class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div>
+          <h3><span class="ar">الاستشارات الاستثمارية الأولية</span><span class="en">Initial Investment Consultation</span></h3>
+          <span class="snum">05</span>
+        </div>
+        <div class="svc-body">
+          <p><span class="ar">قبل أن تبدأ، نساعدك على الإجابة عن الأسئلة المهمة:</span>
+          <span class="en">Before you begin, we help you answer the important questions:</span></p>
+          <ul class="svc-questions">
+            <li><span class="ar">ما الشكل المناسب لنشاطي؟ وهل النشاط متاح؟</span><span class="en">What's the right structure? Is my activity available?</span></li>
+            <li><span class="ar">ما المتطلبات والخطوات والمستندات المطلوبة؟</span><span class="en">What are the requirements, steps, and documents?</span></li>
+            <li><span class="ar">ما الذي يجب أن أعرفه قبل دفع أي مبالغ أو بدء الإجراءات؟</span><span class="en">What must I know before paying anything?</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="svc rv" style="transition-delay:.12s">
+        <div class="svc-top">
+          <div class="sicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+          <h3><span class="ar">خدمات ما بعد التأسيس</span><span class="en">Post-Incorporation Services</span></h3>
+          <span class="snum">06</span>
+        </div>
+        <div class="svc-body">
+          <p><span class="ar">تأسيس الشركة ليس نهاية الرحلة، بل هو البداية. نساعدك في فهم الاحتياجات والإجراءات المرتبطة بمرحلة ما بعد التأسيس، بحسب طبيعة نشاطك ووضع شركتك.</span>
+          <span class="en">Incorporation isn't the end — it's the beginning. We help you understand post-setup needs and procedures, tailored to your activity and your company's situation.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= WHY ALTAMKIN (carousel) ======= -->
+<section class="section compact white" id="why">
+  <div class="container">
+    <div class="carousel">
+      <div class="car-head rv">
+        <div class="section-head">
+          <span class="kicker"><span class="ar">لماذا التمكين الريادي؟</span><span class="en">WHY ALTAMKIN ALRIYADI?</span></span>
+          <h2><span class="ar">لسنا مجرد مكتب… نحن شريكك في فهم الطريق</span><span class="en">Not just an office… your partner in understanding the path</span></h2>
+        </div>
+        <div class="car-nav">
+          <button class="car-btn car-prev" aria-label="السابق / Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="car-btn car-next" aria-label="التالي / Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="car-track">
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2.5 2.5"/></svg></div>
+          <h3><span class="ar">الوضوح</span><span class="en">Clarity</span></h3>
+          <p><span class="ar">نشرح لك الخطوات والإجراءات والمتطلبات بطريقة بسيطة ومفهومة.</span><span class="en">We explain steps, procedures, and requirements simply and clearly.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
+          <h3><span class="ar">الخبرة العملية</span><span class="en">Practical Experience</span></h3>
+          <p><span class="ar">لا نتحدث من الكتب فقط؛ بل نعمل في هذا المجال ونفهم تفاصيل رحلة المستثمر.</span><span class="en">Not just from books — we work in this field and know the investor journey.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3><span class="ar">الشفافية</span><span class="en">Transparency</span></h3>
+          <p><span class="ar">نوضح لك ما تحتاجه، وما لا تحتاجه، وما الذي يمكننا تقديمه لك.</span><span class="en">What you need, what you don't, and what we can offer.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3><span class="ar">التمكين</span><span class="en">Empowerment</span></h3>
+          <p><span class="ar">هدفنا ليس فقط أن نؤسس لك شركة، بل أن نساعدك على فهم البيئة التي ستعمل فيها.</span><span class="en">Not just incorporation — understanding the environment you'll operate in.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= STORY (read more) ======= -->
+<section class="section" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-visual rv">
+        <div class="story-photo">
+          <img data-img="mubarak" alt="مبارك الشيخ — رئيس مجلس إدارة شركة التمكين الريادي" loading="lazy">
+        </div>
+        <div class="founder-tag">
+          <b><span class="ar">مبارك الشيخ</span><span class="en">Mubarak Alshaikh</span></b>
+          <span class="ar">رئيس مجلس إدارة شركة التمكين الريادي</span>
+          <span class="en">Chairman, Altamkin Alriyadi Co.</span>
+        </div>
+      </div>
+      <div class="story-body">
+        <div class="section-head" style="margin-bottom:24px">
+          <span class="kicker"><span class="ar">قصتي</span><span class="en">MY STORY</span></span>
+          <h2>
+            <span class="ar">أنا لم أبدأ من مكتب استشارات… بل بدأت من تجربة</span>
+            <span class="en">I didn't start from a consulting office… I started from experience</span>
+          </h2>
+        </div>
+        <div class="collapsible" data-collapsed="260" style="--fade-color:var(--bg)">
+          <p><span class="ar">قد يبدو تأسيس شركة في السعودية أمرًا بسيطًا عندما تسمع عنه من الخارج. لكن عندما تكون أنت الشخص الذي يحاول بناء مستقبله، وفتح نشاطه، وإدارة أعماله، وأنت مرتبط بنظام إقامة وكفالة، فإن الصورة تصبح مختلفة تمامًا.</span>
+          <span class="en">Setting up a company in Saudi Arabia may sound simple when you hear about it from the outside. But when you're the one trying to build your future, open your business, and manage your operations while tied to a residency and sponsorship system — the picture becomes completely different.</span></p>
+          <p><span class="ar"><strong>أنا مبارك الشيخ.</strong> سوداني الجنسية، مولود في المملكة العربية السعودية. كبرت هنا، وعشت تفاصيل الحياة هنا، وبدأت رحلتي المهنية والعملية من هذه الأرض. وخلال سنوات عملي، مررت بتجارب جعلتني أتعرف عن قرب على التحديات التي يواجهها المقيم عندما يريد أن يبني مشروعًا حقيقيًا ومستقلًا.</span>
+          <span class="en"><strong>I'm Mubarak Alshaikh.</strong> Sudanese by nationality, born in the Kingdom of Saudi Arabia. I grew up here, lived every detail of life here, and started my professional journey from this land. Over years of work, I experienced firsthand the challenges a resident faces when trying to build a real, independent business.</span></p>
+          <p><span class="ar">كنت أريد شيئًا أكبر. كنت أريد أن أبني عملي بطريقة قانونية وواضحة، وأن أمتلك قراري، وأن تكون علاقتي بالسوق السعودي قائمة على الاستثمار والعمل، وليس على التعقيدات التي كنت أعيشها سابقًا. لذلك بدأت رحلة البحث:</span>
+          <span class="en">I wanted something bigger. I wanted to build my business legally and clearly, own my decisions, and base my relationship with the Saudi market on investment and work — not on the complications I used to live with. So I began my journey:</span></p>
+          <div class="story-steps">
+            <span class="chip2"><span class="ar">تعلمت</span><span class="en">I learned</span></span>
+            <span class="chip2"><span class="ar">سألت</span><span class="en">I asked</span></span>
+            <span class="chip2"><span class="ar">جربت</span><span class="en">I tried</span></span>
+            <span class="chip2"><span class="ar">أخطأت وتعلمت من أخطائي</span><span class="en">I learned from my mistakes</span></span>
+          </div>
+          <p><span class="ar">حتى وصلت إلى مرحلة استطعت فيها أن أمتلك شركتي في المملكة كمستثمر أجنبي بملكية 100%. وهنا تغيرت نظرتي بالكامل. اكتشفت أن هناك طريقًا موجودًا، ولكن كثيرًا من الناس لا يعرفون كيف يصلون إليه. ومن هنا جاءت فكرة شركة التمكين الريادي.</span>
+          <span class="en">Until I reached the point where I owned my company in the Kingdom as a foreign investor with 100% ownership. That's when my perspective completely changed. I discovered a path exists — but many people simply don't know how to reach it. And that's where the idea of Altamkin Alriyadi was born.</span></p>
+          <p><span class="ar">لماذا لا أساعد شخصًا آخر على اختصار الطريق الذي أخذ مني سنوات؟ لماذا لا أشرح للناس ما كنت أتمنى أن يخبرني به أحد عندما بدأت؟ وهكذا تحولت التجربة الشخصية إلى رسالة مهنية.</span>
+          <span class="en">Why not help someone else shortcut the road that took me years? Why not explain to people what I wish someone had told me when I started? And so a personal experience became a professional mission.</span></p>
+          <div class="pull">
+            <span class="ar">رسالتي هي أن أساعد المستثمر على أن يبدأ بطريقة صحيحة.</span>
+            <span class="en">My mission is to help every investor start the right way.</span>
+          </div>
+        </div>
+        <button class="readmore-btn" type="button">
+          <span class="more"><span class="ar">اقرأ المزيد</span><span class="en">Read More</span></span>
+          <span class="less"><span class="ar">عرض أقل</span><span class="en">Show Less</span></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= WHO WE SERVE (carousel) ======= -->
+<section class="section compact tint">
+  <div class="container">
+    <div class="carousel">
+      <div class="car-head rv">
+        <div class="section-head">
+          <span class="kicker"><span class="ar">لمن نقدم خدماتنا؟</span><span class="en">WHO WE SERVE</span></span>
+          <h2><span class="ar">أينما كنت في رحلتك… نحن معك</span><span class="en">Wherever you are in your journey… we're with you</span></h2>
+        </div>
+        <div class="car-nav">
+          <button class="car-btn car-prev" aria-label="السابق / Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="car-btn car-next" aria-label="التالي / Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="car-track">
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3><span class="ar">المستثمر الأجنبي</span><span class="en">Foreign Investors</span></h3>
+          <p><span class="ar">إذا كنت خارج السعودية أو داخلها وتريد الاستثمار في المملكة، نساعدك على فهم الطريق الصحيح.</span><span class="en">Inside or outside Saudi Arabia and want to invest? We help you find the right path.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3><span class="ar">المقيم في السعودية</span><span class="en">Residents of Saudi Arabia</span></h3>
+          <p><span class="ar">إذا كنت مقيمًا وتريد بناء نشاطك التجاري بصورة أكثر استقلالية وتنظيمًا، ابدأ معنا من الاستشارة.</span><span class="en">A resident wanting a more independent, structured business? Start with a consultation.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+          <h3><span class="ar">رواد الأعمال</span><span class="en">Entrepreneurs</span></h3>
+          <p><span class="ar">لديك فكرة مشروع وتريد تحويلها إلى كيان تجاري في السعودية؟ نساعدك على فهم الخطوات الأولى.</span><span class="en">Have a project idea to turn into a commercial entity? We help you take the first steps.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3><span class="ar">الشركات والمستثمرون الدوليون</span><span class="en">International Companies & Investors</span></h3>
+          <p><span class="ar">تخطط لدخول السوق السعودي أو توسيع نشاطك إلى المملكة؟ تواصل معنا لدراسة احتياجك.</span><span class="en">Planning to enter or expand into the Saudi market? Contact us to study your needs.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= HOW WE WORK (carousel) ======= -->
+<section class="section compact white" id="process">
+  <div class="container">
+    <div class="carousel">
+      <div class="car-head rv">
+        <div class="section-head">
+          <span class="kicker"><span class="ar">كيف نعمل؟</span><span class="en">HOW WE WORK</span></span>
+          <h2><span class="ar">خمس خطوات… من الاستماع إلى المرافقة</span><span class="en">Five steps… from listening to accompaniment</span></h2>
+        </div>
+        <div class="car-nav">
+          <button class="car-btn car-prev" aria-label="السابق / Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="car-btn car-next" aria-label="التالي / Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="car-track">
+        <div class="car-card">
+          <div class="cnum">01</div>
+          <h3><span class="ar">نستمع إليك</span><span class="en">We Listen</span></h3>
+          <p><span class="ar">نبدأ بفهم وضعك الحالي، جنسيتك، إقامتك إن وجدت، نشاطك، وأهدافك الاستثمارية.</span><span class="en">We understand your situation, nationality, residency (if any), activity, and investment goals.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="cnum">02</div>
+          <h3><span class="ar">نفهم احتياجك</span><span class="en">We Understand</span></h3>
+          <p><span class="ar">نحدد ما الذي تريد الوصول إليه وما المسار الذي يناسب حالتك.</span><span class="en">We define your goals and which path best fits your case.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="cnum">03</div>
+          <h3><span class="ar">نوضح لك الطريق</span><span class="en">We Clarify</span></h3>
+          <p><span class="ar">نشرح لك الإجراءات والمتطلبات والخطوات بشكل واضح.</span><span class="en">We explain procedures, requirements, and steps with full clarity.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="cnum">04</div>
+          <h3><span class="ar">نبدأ التنفيذ</span><span class="en">We Execute</span></h3>
+          <p><span class="ar">بعد الاتفاق، نبدأ في تنفيذ الإجراءات والخدمات المتفق عليها معك.</span><span class="en">Once agreed, we implement the agreed procedures and services.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="cnum">05</div>
+          <h3><span class="ar">نرافقك</span><span class="en">We Accompany You</span></h3>
+          <p><span class="ar">لا نعتبر انتهاء الإجراء نهاية العلاقة. هدفنا أن تكون لديك رؤية أوضح للمرحلة القادمة.</span><span class="en">Completing a procedure isn't the end. Our goal: a clearer vision of what's next.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOUNDER (read more) ======= -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="rv">
+        <div class="quote-card">
+          <span class="qmark">”</span>
+          <blockquote>
+            <span class="ar">أعرف شعور الشخص الذي يريد أن يبدأ ولا يعرف من أين يبدأ. وأعرف شعور من يسمع عشرات الآراء ولا يعرف أيها صحيح. وأعرف قيمة أن تجد شخصًا يختصر عليك الطريق ويقول لك: «خليني أشرح لك الصورة كاملة.»</span>
+            <span class="en">I know how it feels to want to start and not know where to begin. I know how it feels to hear dozens of opinions and not know which is right. And I know the value of finding someone who shortens the road and says: "Let me explain the full picture."</span>
+          </blockquote>
+          <div class="fq-name">
+            <img data-img="logoIcon" alt="">
+            <div>
+              <b><span class="ar">مبارك الشيخ</span><span class="en">Mubarak Alshaikh</span></b>
+              <span class="ar">رئيس مجلس إدارة شركة التمكين الريادي</span>
+              <span class="en">Chairman of Altamkin Alriyadi Co.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="founder-body rv">
+        <div class="section-head" style="margin-bottom:20px">
+          <span class="kicker"><span class="ar">عن المؤسس</span><span class="en">ABOUT THE FOUNDER</span></span>
+          <h2>
+            <span class="ar">قصتي مع السعودية ليست قصة شخص جاء من الخارج</span>
+            <span class="en">My story with Saudi Arabia isn't the story of an outsider</span>
+          </h2>
+        </div>
+        <div class="collapsible" data-collapsed="230" style="--fade-color:var(--bg)">
+          <p><span class="ar">رجل أعمال ومستشار في تأسيس الشركات وتمكين المستثمرين من دخول السوق السعودي. أنا مولود هنا. عشت هنا. عملت هنا. واجهت تحديات نظام الكفالة، وبحثت عن طريقة أكثر استقلالية لبناء مستقبلي، حتى أصبحت اليوم أمتلك شركتي كمستثمر أجنبي بنسبة 100%.</span>
+          <span class="en">A businessman and consultant in company formation and investor market entry. I was born here. I lived here. I worked here. I faced the sponsorship system's challenges and searched for a more independent way to build my future — until today, I own my company as a foreign investor with 100% ownership.</span></p>
+          <p><span class="ar">ولهذا عندما أتحدث عن رحلة المستثمر، فأنا لا أتحدث عنها كمعلومة نظرية فقط — وهذه هي الفكرة التي بنيت عليها شركة التمكين الريادي.</span>
+          <span class="en">So when I talk about the investor journey, I'm not speaking from theory. That's the idea Altamkin Alriyadi was built on.</span></p>
+          <div class="mvp">
+            <div class="mvp-item">
+              <div class="micon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div>
+              <div>
+                <b><span class="ar">رسالتنا</span><span class="en">Our Mission</span></b>
+                <p><span class="ar">أن نجعل دخول المستثمر إلى السوق السعودي أكثر وضوحًا وتنظيمًا ووعيًا، وأن نساهم في بناء جيل من المستثمرين ورواد الأعمال يعرفون حقوقهم ويفهمون التزاماتهم ويعرفون الطريق الذي يسيرون فيه.</span>
+                <span class="en">To make Saudi market entry clearer, more organized, and more informed — and to help build a generation of investors and entrepreneurs who know their rights, understand their obligations, and know the road they're walking.</span></p>
+              </div>
+            </div>
+            <div class="mvp-item">
+              <div class="micon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <div>
+                <b><span class="ar">رؤيتنا</span><span class="en">Our Vision</span></b>
+                <p><span class="ar">أن نصبح من الجهات الرائدة في تمكين المستثمرين ورواد الأعمال من تأسيس وتطوير أعمالهم في المملكة العربية السعودية.</span>
+                <span class="en">To become a leading force in empowering investors and entrepreneurs to establish and grow their businesses in the Kingdom of Saudi Arabia.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="readmore-btn" type="button">
+          <span class="more"><span class="ar">اقرأ المزيد</span><span class="en">Read More</span></span>
+          <span class="less"><span class="ar">عرض أقل</span><span class="en">Show Less</span></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= VALUES (carousel) ======= -->
+<section class="section compact tint">
+  <div class="container">
+    <div class="carousel">
+      <div class="car-head rv">
+        <div class="section-head">
+          <span class="kicker"><span class="ar">قيمنا</span><span class="en">OUR VALUES</span></span>
+          <h2><span class="ar">مبادئ لا نتنازل عنها</span><span class="en">Principles we never compromise</span></h2>
+        </div>
+        <div class="car-nav">
+          <button class="car-btn car-prev" aria-label="السابق / Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg></button>
+          <button class="car-btn car-next" aria-label="التالي / Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="car-track">
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3><span class="ar">الصدق قبل البيع</span><span class="en">Honesty Before Sales</span></h3>
+          <p><span class="ar">لن نقول لك ما تريد سماعه فقط لإتمام الخدمة. سنقول لك ما تحتاج إلى معرفته.</span><span class="en">We won't tell you what you want to hear just to close. We'll tell you what you need to know.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3><span class="ar">الوضوح</span><span class="en">Clarity</span></h3>
+          <p><span class="ar">نؤمن أن المعلومة الواضحة توفر على المستثمر الكثير من الوقت والمال.</span><span class="en">Clear information saves the investor much time and money.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <h3><span class="ar">الاحترافية</span><span class="en">Professionalism</span></h3>
+          <p><span class="ar">نتعامل مع كل مشروع باعتباره مشروعًا حقيقيًا يستحق الاهتمام.</span><span class="en">Every project is a real venture that deserves full attention.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3><span class="ar">التمكين</span><span class="en">Empowerment</span></h3>
+          <p><span class="ar">نريدك أن تفهم، وليس فقط أن تدفع وتحصل على مستند.</span><span class="en">We want you to understand — not just pay and get a document.</span></p>
+        </div>
+        <div class="car-card">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3><span class="ar">المسؤولية</span><span class="en">Responsibility</span></h3>
+          <p><span class="ar">نلتزم بالوضوح في نطاق الخدمات والإجراءات التي نقدمها.</span><span class="en">Full clarity about the scope of the services we provide.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FAQ ======= -->
+<section class="section white" id="faq">
+  <div class="container">
+    <div class="section-head center rv">
+      <span class="kicker"><span class="ar">الأسئلة الشائعة</span><span class="en">FAQ</span></span>
+      <h2><span class="ar">إجابات على أكثر ما يشغل المستثمرين</span><span class="en">Answers to investors' most common questions</span></h2>
+    </div>
+    <div class="faq-list rv">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span><span class="ar">هل يمكن للأجنبي تأسيس شركة في السعودية؟</span><span class="en">Can a foreigner establish a company in Saudi Arabia?</span></span>
+          <span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div>
+          <span class="ar">تختلف إمكانية ومتطلبات تأسيس الشركة بحسب الجنسية والنشاط وهيكل الاستثمار والمتطلبات النظامية المعمول بها. نبدأ معك بدراسة وضعك قبل تحديد المسار المناسب.</span>
+          <span class="en">Eligibility and requirements vary by nationality, activity, investment structure, and applicable regulations. We start by studying your situation before determining the right path.</span>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span><span class="ar">هل يشترط أن أكون مقيمًا في السعودية؟</span><span class="en">Do I need to be a resident of Saudi Arabia?</span></span>
+          <span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div>
+          <span class="ar">ليس بالضرورة. توجد مسارات للمستثمرين غير المقيمين، وتختلف المتطلبات بحسب الحالة والنشاط.</span>
+          <span class="en">Not necessarily. There are paths for non-resident investors, and requirements vary by case and activity.</span>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span><span class="ar">هل يستطيع المقيم تأسيس شركة؟</span><span class="en">Can a resident establish a company?</span></span>
+          <span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div>
+          <span class="ar">يعتمد ذلك على وضع المقيم وطبيعة النشاط والهيكل القانوني والاستثماري المقترح. لذلك ننصح بالبدء بدراسة الحالة قبل اتخاذ أي خطوة.</span>
+          <span class="en">It depends on the resident's situation, the nature of the activity, and the proposed legal and investment structure. We recommend a case study before any step.</span>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span><span class="ar">هل يمكن أن تكون ملكية الشركة 100% للأجنبي؟</span><span class="en">Can a company be 100% foreign-owned?</span></span>
+          <span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div>
+          <span class="ar">توجد أنشطة وهياكل استثمارية يمكن أن تسمح بملكية أجنبية كاملة وفق الأنظمة والمتطلبات المعمول بها، لكن الأمر يعتمد على النشاط وهيكل الاستثمار.</span>
+          <span class="en">Certain activities and structures may allow full foreign ownership under applicable regulations — but it depends on the activity and investment structure.</span>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span><span class="ar">كم يستغرق تأسيس الشركة؟</span><span class="en">How long does company formation take?</span></span>
+          <span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div>
+          <span class="ar">تختلف المدة بحسب نوع الشركة والنشاط ووضع المستثمر والموافقات المطلوبة واكتمال المستندات.</span>
+          <span class="en">Duration varies by company type, activity, the investor's situation, required approvals, and document completeness.</span>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span><span class="ar">هل تقدمون استشارة قبل بدء التأسيس؟</span><span class="en">Do you offer a consultation before starting?</span></span>
+          <span class="fico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a"><div>
+          <span class="ar">نعم، ونعتبر الاستشارة خطوة مهمة لفهم وضع المستثمر وتحديد المسار المناسب قبل البدء في الإجراءات.</span>
+          <span class="en">Yes — the consultation is an essential step to understand the investor's situation and determine the right path before any procedures.</span>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CONTACT ======= -->
+<section class="section" id="contact">
+  <div class="sadu-light"></div>
+  <div class="container" style="position:relative">
+    <div class="contact-grid">
+      <div class="contact-info rv">
+        <span class="kicker"><span class="ar">تواصل معنا</span><span class="en">CONTACT US</span></span>
+        <h2>
+          <span class="ar">مستعد تبدأ؟ لا تبدأ بالإجراءات قبل أن تفهم الصورة</span>
+          <span class="en">Ready to start? Don't begin procedures before you see the full picture</span>
+        </h2>
+        <p>
+          <span class="ar">أرسل لنا بياناتك وسيتواصل معك فريق التمكين الريادي لفهم احتياجك وتوجيهك للخطوة التالية.</span>
+          <span class="en">Send us your details and the Altamkin Alriyadi team will reach out to understand your needs and guide you to the next step.</span>
+        </p>
+        <div class="c-item">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <b><span class="ar">الجوال / واتساب</span><span class="en">Phone / WhatsApp</span></b>
+            <a data-wa="hello" class="ltr" target="_blank" rel="noopener"><span data-txt="phoneDisplay"></span></a>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div>
+            <b><span class="ar">البريد الإلكتروني</span><span class="en">Email</span></b>
+            <a data-email class="ltr"></a>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <b><span class="ar">موقع المكتب</span><span class="en">Office Location</span></b>
+            <a data-maps target="_blank" rel="noopener"><span class="ar" data-txt="addressAr"></span><span class="en" data-txt="addressEn"></span></a>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></div>
+          <div>
+            <b><span class="ar">تيك توك</span><span class="en">TikTok</span></b>
+            <a data-tiktok class="ltr" target="_blank" rel="noopener">@mubarak.alsheikh</a>
+          </div>
+        </div>
+      </div>
+      <div class="cta-panel rv">
+        <div class="sadu-white"></div>
+        <h3>
+          <span class="ar">هل تريد أن تعرف هل يمكنك تأسيس شركتك في السعودية؟</span>
+          <span class="en">Want to know if you can establish your company in Saudi Arabia?</span>
+        </h3>
+        <p>
+          <span class="ar">ابدأ بالخطوة الصحيحة — املأ نموذج الطلب وسنعود إليك، أو تحدث معنا مباشرة عبر واتساب واحكِ لنا عن وضعك وفكرة مشروعك.</span>
+          <span class="en">Start with the right step — fill in the request form and we'll get back to you, or talk to us directly on WhatsApp about your situation and project idea.</span>
+        </p>
+        <div class="cta-btns">
+          <button type="button" class="btn btn-white open-form">
+            <span class="ar">املأ نموذج الطلب</span><span class="en">Open Request Form</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+          </button>
+          <a class="btn btn-glass" data-wa="ask" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            <span class="ar">تواصل عبر واتساب</span><span class="en">Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer>
+  <div class="sadu-white"></div>
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img data-img="logo" alt="شعار التمكين الريادي">
+      <p>
+        <span class="ar">نُمكّن المستثمرين ورواد الأعمال من فهم الطريق الصحيح لتأسيس وتطوير أعمالهم في المملكة العربية السعودية.</span>
+        <span class="en">We empower investors and entrepreneurs to understand the right path to establish and grow their businesses in the Kingdom of Saudi Arabia.</span>
+      </p>
+      <div class="fb-name">
+        <b><span class="ar">مبارك الشيخ</span><span class="en">Mubarak Alshaikh</span></b>
+        <span class="ar">رئيس مجلس الإدارة</span><span class="en">Chairman of the Board</span>
+      </div>
+      <div class="socials">
+        <a data-tel aria-label="اتصل بنا / Call us">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <a data-tiktok target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+        </a>
+        <a data-wa="hello" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4><span class="ar">روابط</span><span class="en">Links</span></h4>
+      <ul class="footer-links">
+        <li><a href="#home"><span class="ar">الرئيسية</span><span class="en">Home</span></a></li>
+        <li><a href="#services"><span class="ar">خدماتنا</span><span class="en">Our Services</span></a></li>
+        <li><a href="#why"><span class="ar">من نحن</span><span class="en">About Us</span></a></li>
+        <li><a href="#story"><span class="ar">قصتي</span><span class="en">My Story</span></a></li>
+        <li><a href="#process"><span class="ar">كيف نعمل</span><span class="en">How We Work</span></a></li>
+        <li><a href="#faq"><span class="ar">الأسئلة الشائعة</span><span class="en">FAQ</span></a></li>
+        <li><a href="#contact"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4><span class="ar">تواصل معنا</span><span class="en">Get in Touch</span></h4>
+      <ul class="footer-contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a data-tel class="ltr" aria-label="اتصل بنا / Call us"><span data-txt="phoneDisplay"></span></a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <a data-email class="ltr"></a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <a data-maps target="_blank" rel="noopener"><span class="ar" data-txt="addressAr"></span><span class="en" data-txt="addressEn"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span class="tagline">
+        <span class="ar">من تجربة شخصية… إلى تمكين المستثمرين.</span>
+        <span class="en">From a personal journey… to empowering investors.</span>
+      </span>
+      <span class="copy">
+        <span class="ar">© 2026 شركة التمكين الريادي. جميع الحقوق محفوظة.</span>
+        <span class="en">© 2026 Altamkin Alriyadi Co. All rights reserved.</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ======= CONTACT FORM POPUP ======= -->
+<div class="modal-scrim" id="formModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" id="modalClose" aria-label="إغلاق / Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <h3 id="modalTitle"><span class="ar">ابدأ رحلتك الاستثمارية</span><span class="en">Start Your Investment Journey</span></h3>
+    <p class="modal-sub">
+      <span class="ar">أرسل بياناتك وسيتواصل معك فريق التمكين الريادي لفهم احتياجك وتوجيهك للخطوة التالية.</span>
+      <span class="en">Send your details and the Altamkin Alriyadi team will reach out to guide you to the next step.</span>
+    </p>
+    <div class="form-success" id="formSuccess" role="status">
+      <span class="ar">✓ تم استلام طلبك بنجاح! سيتواصل معك فريق التمكين الريادي في أقرب وقت.</span>
+      <span class="en">✓ Your request has been received! The team will contact you shortly.</span>
+    </div>
+    <form id="leadForm" novalidate>
+      <div class="form-grid">
+        <div class="fgroup">
+          <label for="fName"><span class="ar">الاسم الكامل <span class="req">*</span></span><span class="en">Full Name <span class="req">*</span></span></label>
+          <input type="text" id="fName" name="name" required autocomplete="name">
+        </div>
+        <div class="fgroup">
+          <label for="fPhone"><span class="ar">رقم الجوال / واتساب <span class="req">*</span></span><span class="en">Phone / WhatsApp <span class="req">*</span></span></label>
+          <input type="tel" id="fPhone" name="phone" required autocomplete="tel" placeholder="+966 5X XXX XXXX" style="direction:ltr;text-align:start">
+        </div>
+        <div class="fgroup">
+          <label for="fEmail"><span class="ar">البريد الإلكتروني <span class="req">*</span></span><span class="en">Email <span class="req">*</span></span></label>
+          <input type="email" id="fEmail" name="email" required autocomplete="email" placeholder="name@example.com" style="direction:ltr;text-align:start">
+        </div>
+        <div class="fgroup">
+          <label for="fNat"><span class="ar">الجنسية <span class="req">*</span></span><span class="en">Nationality <span class="req">*</span></span></label>
+          <input type="text" id="fNat" name="nationality" required>
+        </div>
+        <div class="fgroup full">
+          <label><span class="ar">هل أنت مقيم في السعودية؟ <span class="req">*</span></span><span class="en">Are you a resident of Saudi Arabia? <span class="req">*</span></span></label>
+          <div class="radio-row">
+            <label class="radio-pill">
+              <input type="radio" name="resident" value="yes" required>
+              <span><span class="ar">نعم</span><span class="en">Yes</span></span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="resident" value="no">
+              <span><span class="ar">لا</span><span class="en">No</span></span>
+            </label>
+          </div>
+        </div>
+        <div class="fgroup full">
+          <label for="fService"><span class="ar">ما الخدمة التي تبحث عنها؟ <span class="req">*</span></span><span class="en">Which service are you looking for? <span class="req">*</span></span></label>
+          <select id="fService" name="service" required>
+            <option value="" data-ar="— اختر الخدمة —" data-en="— Select a service —"></option>
+            <option value="setup" data-ar="تأسيس شركة" data-en="Company formation"></option>
+            <option value="foreign" data-ar="تأسيس شركة بملكية أجنبية" data-en="Foreign-owned company setup"></option>
+            <option value="consult" data-ar="استشارة استثمارية" data-en="Investment consultation"></option>
+            <option value="resident" data-ar="تأسيس شركة للمقيم" data-en="Company formation for residents"></option>
+            <option value="nonresident" data-ar="تأسيس شركة لغير المقيم" data-en="Company formation for non-residents"></option>
+            <option value="other" data-ar="أخرى" data-en="Other"></option>
+          </select>
+        </div>
+        <div class="fgroup full">
+          <label for="fMsg"><span class="ar">اكتب لنا باختصار عن مشروعك</span><span class="en">Tell us briefly about your project</span></label>
+          <textarea id="fMsg" name="message"></textarea>
+        </div>
+        <div class="fgroup full">
+          <button type="submit" class="btn btn-primary" style="width:100%;min-height:52px">
+            <span class="ar">إرسال الطلب</span><span class="en">Submit Request</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="form-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>
+          <span class="ar">بياناتك محفوظة بسرية تامة، وسيتم تحويل طلبك مباشرة إلى فريق التمكين الريادي عبر واتساب.</span>
+          <span class="en">Your data is fully confidential. Your request is forwarded directly to the team via WhatsApp.</span>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ======= FLOATING ======= -->
+<a class="wa-float" data-wa="hello" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب / Chat on WhatsApp">
+  <span class="wring"></span>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.668-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<button class="to-top" id="toTop" aria-label="العودة للأعلى / Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+/* ================================================================
+   ███ SITE CONFIG — EDIT EVERYTHING HERE (contacts + images) ███
+   ================================================================ */
+var SITE = {
+  /* ---- contact details ---- */
+  whatsapp: '966593153979',                         /* WhatsApp number, no + sign */
+  phoneDisplay: '+966 59 315 3979',                 /* how the number appears on the page */
+  email: 'info@altamkinqlriyadi.com',
+  tiktok: 'https://www.tiktok.com/@mubarak.alsheikh',
+  mapsUrl: 'https://maps.app.goo.gl/akZDNGBQp9zszJgF9',
+  addressAr: 'الرياض — برج المملكة — الدور 12',
+  addressEn: 'Riyadh — Kingdom Tower — Floor 12',
+
+  /* ---- pre-filled WhatsApp messages ---- */
+  waMessages: {
+    hello:   'مرحباً، أرغب في التواصل مع شركة التمكين الريادي',
+    consult: 'مرحباً، أرغب في التحدث مع مستشار حول تأسيس شركة في السعودية',
+    ask:     'مرحباً، أريد أن أعرف هل يمكنني تأسيس شركتي في السعودية؟'
+  },
+
+  /* ---- images: replace any base64 string below, or use a URL like 'images/logo.png' ---- */
+  images: {
+    /* ===== IMAGE 1: MAIN LOGO — header, hero slide 3, footer ===== */
+    logo: 'tamkinlogo.png',
+
+    /* ===== IMAGE 4: MUBARAK PORTRAIT — "My Story" section ===== */
+    mubarak: 'mubarak.png'
+  }
+};
+/* ================== end of config ================== */
+
+/* wire config → page */
+(function applyConfig(){
+  document.querySelectorAll('[data-img]').forEach(function(el){
+    var src = SITE.images[el.getAttribute('data-img')];
+    if(src) el.src = src;
+  });
+  document.querySelectorAll('[data-bg]').forEach(function(el){
+    var src = SITE.images[el.getAttribute('data-bg')];
+    if(src) el.style.backgroundImage = 'url("' + src + '")';
+  });
+  document.querySelectorAll('[data-wa]').forEach(function(el){
+    var msg = SITE.waMessages[el.getAttribute('data-wa')] || SITE.waMessages.hello;
+    el.href = 'https://wa.me/' + SITE.whatsapp + '?text=' + encodeURIComponent(msg);
+  });
+  document.querySelectorAll('[data-email]').forEach(function(el){
+    el.href = 'mailto:' + SITE.email;
+    if(!el.textContent.trim()) el.textContent = SITE.email;
+  });
+  document.querySelectorAll('[data-tel]').forEach(function(el){ el.href = 'tel:+' + SITE.whatsapp; });
+  document.querySelectorAll('[data-tiktok]').forEach(function(el){ el.href = SITE.tiktok; });
+  document.querySelectorAll('[data-maps]').forEach(function(el){ el.href = SITE.mapsUrl; });
+  document.querySelectorAll('[data-txt]').forEach(function(el){
+    el.textContent = SITE[el.getAttribute('data-txt')] || '';
+  });
+  var fav = document.createElement('link');
+  fav.rel = 'icon'; fav.type = 'image/png'; fav.href = SITE.images.logoIcon;
+  document.head.appendChild(fav);
+})();
+
+/* ================= language ================= */
+var currentLang = 'ar';
+function setLang(lang){
+  currentLang = lang;
+  document.body.classList.toggle('lang-en', lang === 'en');
+  var html = document.documentElement;
+  html.lang = lang;
+  html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.getElementById('btnAr').classList.toggle('active', lang === 'ar');
+  document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+  document.title = lang === 'ar'
+    ? 'التمكين الريادي | تأسيس الشركات في السعودية'
+    : 'Altamkin Alriyadi | Company Formation in Saudi Arabia';
+  document.querySelectorAll('#fService option').forEach(function(o){
+    o.textContent = o.getAttribute(lang === 'ar' ? 'data-ar' : 'data-en');
+  });
+  document.querySelectorAll('.faq-item.open .faq-a').forEach(function(a){ a.style.maxHeight = a.scrollHeight + 'px'; });
+  document.querySelectorAll('.collapsible.expanded').forEach(function(c){ c.style.maxHeight = c.scrollHeight + 'px'; });
+}
+setLang('ar');
+
+/* ================= smart header ================= */
+var navToggle = document.getElementById('navToggle');
+var navLinks = document.getElementById('navLinks');
+(function(){
+  var header = document.getElementById('siteHeader');
+  var lastY = window.scrollY;
+  function onScroll(){
+    var y = window.scrollY;
+    header.classList.toggle('transparent', y < 60 && !navLinks.classList.contains('open'));
+    if(y > lastY + 6 && y > 160){ header.classList.add('hide'); }
+    else if(y < lastY - 6 || y <= 160){ header.classList.remove('hide'); }
+    lastY = y;
+    document.getElementById('toTop').classList.toggle('show', y > 650);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('load', onScroll);
+})();
+document.getElementById('toTop').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+navToggle.addEventListener('click', function(){
+  var open = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  var header = document.getElementById('siteHeader');
+  if(open) header.classList.remove('transparent');
+  else if(window.scrollY < 60) header.classList.add('transparent');
+});
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+  });
+});
+
+/* ================= hero slider ================= */
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#heroSlider .slide'));
+  var dotsWrap = document.getElementById('sliderDots');
+  var idx = 0, timer = null, INTERVAL = 6500;
+  slides.forEach(function(_, i){
+    var d = document.createElement('button');
+    d.className = 's-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i+1));
+    d.addEventListener('click', function(){ go(i); restart(); });
+    dotsWrap.appendChild(d);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+  function go(n){
+    slides[idx].classList.remove('active'); dots[idx].classList.remove('active');
+    idx = (n + slides.length) % slides.length;
+    slides[idx].classList.add('active'); dots[idx].classList.add('active');
+  }
+  function next(){ go(idx + 1); } function prev(){ go(idx - 1); }
+  function restart(){ clearInterval(timer); timer = setInterval(next, INTERVAL); }
+  document.getElementById('sNext').addEventListener('click', function(){ next(); restart(); });
+  document.getElementById('sPrev').addEventListener('click', function(){ prev(); restart(); });
+  var startX = null, slider = document.getElementById('heroSlider');
+  slider.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+  slider.addEventListener('touchend', function(e){
+    if(startX === null) return;
+    var dx = e.changedTouches[0].clientX - startX;
+    if(Math.abs(dx) > 55){
+      var rtl = document.documentElement.dir === 'rtl';
+      if((dx < 0 && !rtl) || (dx > 0 && rtl)) next(); else prev();
+      restart();
+    }
+    startX = null;
+  }, {passive:true});
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden){ clearInterval(timer); } else { restart(); }
+  });
+  timer = setInterval(next, INTERVAL);
+})();
+
+/* ================= generic carousels ================= */
+document.querySelectorAll('.carousel').forEach(function(car){
+  var track = car.querySelector('.car-track');
+  var card = track.children[0];
+  function step(){ return (card ? card.getBoundingClientRect().width : 300) + 16; }
+  function move(dir){
+    var rtl = document.documentElement.dir === 'rtl';
+    track.scrollBy({left: (rtl ? -dir : dir) * step(), behavior:'smooth'});
+  }
+  var prev = car.querySelector('.car-prev'), next = car.querySelector('.car-next');
+  if(prev) prev.addEventListener('click', function(){ move(-1); });
+  if(next) next.addEventListener('click', function(){ move(1); });
+});
+
+/* ================= read more ================= */
+document.querySelectorAll('.collapsible').forEach(function(box){
+  var btn = box.parentElement.querySelector('.readmore-btn');
+  if(!btn) return;
+  var collapsedH = parseInt(box.getAttribute('data-collapsed') || '220', 10);
+  function collapse(animate){
+    box.classList.remove('expanded'); btn.classList.remove('open');
+    if(!animate) box.style.transition = 'none';
+    box.style.maxHeight = collapsedH + 'px';
+    if(!animate) requestAnimationFrame(function(){ box.style.transition = ''; });
+  }
+  function expand(){
+    box.classList.add('expanded'); btn.classList.add('open');
+    box.style.maxHeight = box.scrollHeight + 'px';
+  }
+  function checkNeed(){
+    if(box.scrollHeight <= collapsedH + 60){
+      btn.style.display = 'none'; box.style.maxHeight = 'none'; box.classList.add('expanded');
+    } else {
+      btn.style.display = '';
+      if(!btn.classList.contains('open')) collapse(false);
+    }
+  }
+  btn.addEventListener('click', function(){
+    if(btn.classList.contains('open')){
+      collapse(true);
+      var top = box.getBoundingClientRect().top + window.scrollY - 110;
+      if(window.scrollY > top) window.scrollTo({top:top, behavior:'smooth'});
+    } else { expand(); }
+  });
+  collapse(false); checkNeed();
+  window.addEventListener('resize', function(){
+    if(btn.classList.contains('open')){ box.style.maxHeight = box.scrollHeight + 'px'; }
+    else { checkNeed(); }
+  });
+});
+
+/* ================= FAQ accordion ================= */
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+  q.addEventListener('click', function(){
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight = '0px';
+      o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+      q.setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+/* ================= modal ================= */
+(function(){
+  var scrim = document.getElementById('formModal');
+  var closeBtn = document.getElementById('modalClose');
+  function openModal(){
+    scrim.classList.add('open');
+    scrim.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    var first = scrim.querySelector('input');
+    setTimeout(function(){ if(first) first.focus(); }, 120);
+  }
+  function closeModal(){
+    scrim.classList.remove('open');
+    scrim.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.open-form').forEach(function(b){ b.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  scrim.addEventListener('click', function(e){ if(e.target === scrim) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && scrim.classList.contains('open')) closeModal(); });
+})();
+
+/* ================= reveal ================= */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); }
+  });
+},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+/* ================= form → WhatsApp ================= */
+document.getElementById('leadForm').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var f = ev.target;
+  if(!f.checkValidity()){ f.reportValidity(); return; }
+  var res = f.querySelector('input[name="resident"]:checked');
+  var svcOpt = f.service.options[f.service.selectedIndex];
+  var svc = svcOpt ? svcOpt.getAttribute(currentLang==='ar'?'data-ar':'data-en') : '';
+  var resTxt = res ? (currentLang==='ar' ? (res.value==='yes'?'نعم':'لا') : (res.value==='yes'?'Yes':'No')) : '';
+  var msg = f.message.value.trim();
+  var lines = currentLang === 'ar' ? [
+    'طلب جديد — موقع التمكين الريادي',
+    'الاسم: ' + f.name.value.trim(),
+    'الجوال/واتساب: ' + f.phone.value.trim(),
+    'البريد: ' + f.email.value.trim(),
+    'الجنسية: ' + f.nationality.value.trim(),
+    'مقيم في السعودية: ' + resTxt,
+    'الخدمة المطلوبة: ' + svc,
+    'عن المشروع: ' + (msg || '—')
+  ] : [
+    'New request — Altamkin Alriyadi website',
+    'Name: ' + f.name.value.trim(),
+    'Phone/WhatsApp: ' + f.phone.value.trim(),
+    'Email: ' + f.email.value.trim(),
+    'Nationality: ' + f.nationality.value.trim(),
+    'KSA resident: ' + resTxt,
+    'Requested service: ' + svc,
+    'About the project: ' + (msg || '—')
+  ];
+  window.open('https://wa.me/' + SITE.whatsapp + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+  var ok = document.getElementById('formSuccess');
+  ok.classList.add('show');
+  f.reset();
+  ok.scrollIntoView({behavior:'smooth', block:'center'});
+});
+</script>
+</body>
+</html>
